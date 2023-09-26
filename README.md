@@ -34,3 +34,6 @@ Featuring many Pendo testing and debugging methods, as well as other tangential 
   - Switch to hardcoded strings in [pendo-snippet.js lines 54-69](pendo-snippet.js#L54-L69)
 - Enable Snippet-based [Location API](https://agent.pendo.io/advanced/location):
   - Comment in [pendo-snippet.js lines 92-100](pendo-snippet.js#L92-L100)
+- Add [client-side Track Event](https://support.pendo.io/hc/en-us/articles/360032294291-Track-Events-Configuration) to any element:
+  - configure the Track Event Properties in [pendo-trackEvent.js](pendo-trackEvent.js)
+  - in any HTML file, add ```onclick="pendoClickEvent()"``` as an attribute to any element
