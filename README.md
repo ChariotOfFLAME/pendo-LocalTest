@@ -8,7 +8,7 @@ Featuring many Pendo testing and debugging methods, as well as other tangential 
 - Create a new App in your personal Pendo Test Subscription, or add these pages to another App.
 - Download the Repo into a self-contained folder
 - open [pendo-snippet.js](/pendo-snippet.js) in your text editor
-- replace the string on [line 104](/pendo-snippet.js#L104) with the above App's Pendo API Key [Pendo API Key](https://support.pendo.io/hc/en-us/articles/9480629519131-Error-No-Matching-API-Key)
+- replace the string on [line 104](/pendo-snippet.js#L104) with the above App's [Pendo API Key](https://support.pendo.io/hc/en-us/articles/9480629519131-Error-No-Matching-API-Key)
   - This will be loaded on every page in the directory, and thus is installed on each page, so you only need to change the API key here.
   - for an EU sub, comment out [lines 28-104](pendo-snippet.js#L28-L104) and uncomment [lines 108-134](pendo-snippet.js#L108C3-L134), replacing the string on [line 134](pendo-snippet.js#L134) with the EU Sub App's API Key
 
