@@ -2,7 +2,7 @@
 A localhost website created by Alex Newton, heavily modified by @ChariotOfFLAME . 
 Featuring many Pendo testing and debugging methods, as well as other tangential projects.
 
-:warning: WARNING: This repo is designed for use with Pendo Employees and their access levels to the Pendo Application in mind. While many of these functions may work for your customer Subscription, the below instructions are geared towards internal Pendo Employees. ⚠️
+:warning: _WARNING: This repo is designed for use with Pendo Employees and their access levels to the Pendo Application in mind. While many of these functions may work for your customer Subscription, the below instructions are geared towards internal Pendo Employees._ ⚠️
 
 ## Setup
 - Create a new App in your personal Pendo Test Subscription, or add these pages to another App.
