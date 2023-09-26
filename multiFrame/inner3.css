@@ -1,0 +1,19 @@
+body {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.subtext {
+  font-size: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

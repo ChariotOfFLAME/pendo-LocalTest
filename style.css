@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@700&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+#catHeader,
+#survey-form {
+  font-family: 'Almendra', serif;
+}
+
+#title {
+  margin: 0 auto 1rem auto;
+  font-size: 7.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(182, 0, 0, 0.75),
+      rgba(182, 0, 0, 0.45)
+    ),
+    url(https://images.unsplash.com/photo-1570250363652-0d8340128223?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2302&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.formLabel {
+  display: block;
+  font-size: 1.25rem;
+  font-family: 'Almendra', serif;
+  font-weight: bold;
+  line-height: 1.7rem;
+  padding-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  font-size: 1rem;
+  font-weight: normal;
+  padding-left: 0.75rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.form-wrapper {
+  background-color: #424242;
+  opacity: 0.8;
+  margin: auto;
+  padding: 3.45rem;
+  width: 50%;
+  border-radius: 1rem;
+  z-index: -1;
+  margin: auto auto 10px auto;
+}
+
+.form-item {
+  font-size: 1.25rem;
+  font-family: 'Almendra', serif;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.header {
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-item {
+  text-align: left;
+  color: #ffffff;
+  font-size: 1.125rem;
+  margin: 1rem auto 1.275rem auto;
+  padding: 0.2rem;
+}
+
+.form-info {
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  height: 2rem;
+}
+
+input.list {
+  margin-right: 1rem;
+}
+#description {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: arial, sans-serif;
+}
+
+#facts {
+  text-align: center;
+  width: 100%;
+}
+
+#mybutton {
+  text-align: center;
+  width: 100%;
+}
+
+#submit {
+  width: 20rem;
+  height: 4rem;
+  font-size: 1.55rem;
+  color: #fff;
+  background-color: #f3c623;
+  font-weight: bold;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#newTabButton {
+  text-align: center;
+  width: 100%;
+}
+
+#newTab {
+  width: 20rem;
+  height: 4rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #23f3e5;
+  font-weight: bold;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#iFrameTownButton {
+  text-align: center;
+  width: 100%;
+}
+
+#iFrameTown {
+  width: 20rem;
+  height: 4rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #6cf323;
+  font-weight: bold;
+  max-width: 100%;
+  max-height: 100%;
+  color: black;
+}
+
+[type='radio']:checked + label:before,
+[type='radio']:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #a8a8a8;
+  border-radius: 100%;
+  background: #fff;
+  opacity: 1;
+}
+
+#guideLauncher,
+#pendoFunctions {
+  background-color: #424242;
+  opacity: 0.8;
+  margin: auto auto 10px auto;
+  padding: 3.45rem;
+  width: 50%;
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+#guidesTitle,
+#functionsTitle {
+  color: white;
+}
+
+.api-guides,
+.pendo-functions {
+  font-weight: normal;
+  padding-left: 0.75rem;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  font-size: 1.25rem;
+  font-family: 'Almendra', serif;
+  line-height: 1.7rem;
+  padding-bottom: 0.5rem;
+}
+
+.function-link {
+  font-family: monospace;
+}
+
+.guide-link:link,
+.function-link:link {
+  color: white;
+}
+
+.guide-link:visited,
+.function-link:visited {
+  color: white;
+}
+
+#pendoStatus {
+  background-color: #d8d8d8;
+  opacity: 0.95;
+  margin: auto;
+  padding: 3.45rem;
+  width: 50%;
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+#incidents-heading {
+  text-align: center;
+}
+
+#status-link {
+  color: #ff4876;
+  -webkit-text-stroke: 0.2px black;
+}
+
+#status-message {
+  text-align: center;
+}
+
+.degraded {
+  color: red;
+}
+.operational {
+  color: green;
+}

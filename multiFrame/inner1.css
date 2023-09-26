@@ -1,0 +1,42 @@
+body {
+  background-color: rgba(250, 50, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+iframe {
+  height: 200px;
+  resize: both;
+}
+.text {
+  padding: 10px;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+}
+.some-dropdown {
+  margin-top: 15px;
+}
+#hidden-toggle-content {
+  display: none;
+  margin-top: 10px;
+}
+#hidden-toggle-content.visible {
+  display: block;
+}
+
+#scroll-container {
+  height: 200px;
+  overflow: scroll;
+  border: 1px solid black;
+  width: 300px;
+}
+
+#dumb-hidden-text {
+  margin-top: 1000px;
+  padding: 10px;
+}

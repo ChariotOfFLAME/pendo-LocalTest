@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LocalTest</title>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="pendo-snippet.js"></script>
+    <script src="pendo-trackEvent.js"></script>
+    <script src="pendo-guideLauncher.js" defer></script>
+    <script src="pendo-agent-functions.js"></script>
+    <script src="https://status.pendo.io/api/v2/status.json"></script>
+    <script
+    type="text/javascript"
+    src="https://cdn.statuspage.io/se-v2.js"
+  ></script>
+  <script defer>
+    var sp = new StatusPage.page({ page: 'pendo' });
+  </script>
+  <script defer src="pendo-status.js"></script>
+  <!-- Start Programmatic Location API:  -->
+  <!-- <script defer> -->
+    <!-- function checkPendo() { -->
+      <!-- if (!pendo.isReady()) { -->
+        <!-- window.setTimeout( -->
+          <!-- checkPendo, 1000 -->
+        <!-- ); /* this checks the flag every 1000 milliseconds*/ -->
+      <!-- } else { -->
+        <!-- pendo.location.addTransforms([{ -->
+          <!-- attr: 'href', -->
+          <!-- action: 'Replace', -->
+          <!-- data: 'https://this.isnt.a.website/', -->
+          
+        <!-- }]) -->
+      <!-- } -->
+    <!-- } -->
+  <!-- checkPendo(); -->
+  <!-- </script> -->
+  <!-- <!~~ End Programmatic Location API ~~> -->
+    <!-- Start of d3v-pendo-ts-test Zendesk Widget script -->
+<!-- <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=70be359a-9c3d-41ee-9923-3011e9451a80"> </!-->
+<!-- <!~~ End of d3v-pendo-ts-test Zendesk Widget script -->
+  </head>
+  <body>
+    <html>
+      <body>
+        <div class="navbar">
+        </div>
+        <div class="container">
+          <!-- Header -->
+          <div class="header" id="catHeader">
+            <h1 id="title" onclick="pendoClickEvent()">TIGER PALACE</h1>
+          </a>
+            <p id="description">
+              <em>Welcome to the big cat emporium</em>
+            </p>
+          </div>
+          <!-- End Header -->
+          <!-- Begin Programmatic Guide Launcher -->
+          <div id="guideLauncher">
+          </div>
+          <!-- End Programmatic Guide Launcher-->
+          <!-- Begin Pendo Functions-->
+          <div id="pendoFunctions">
+            <h1 id="functionsTitle">Pendo Agent Functions ---> check console for results!</h1>
+            <ul>
+              <li onclick="console.log(`pendo.isReady() = ` + pendo.isReady())" class="pendo-functions">
+                <a href="#" id="isReady" class="function-link">
+                  pendo.isReady()
+                </a>
+              </li>
+              <li onclick="pendo.designerv2.launchInAppDesigner(); console.log(`pendo.designerv2.launchInAppDesigner() called`)" class="pendo-functions">
+                <a href="#" id="launchInAppDesigner" class="function-link">
+                  pendo.designerv2.launchInAppDesigner()
+                </a>
+              </li>
+              <li onclick="debugging()" class="pendo-functions">
+                <a href="#" id="enableDebugging" class="function-link">
+                  pendo.enableDebugging()
+                </a>
+              </li>
+              <li onclick=(logging()) class="pendo-functions">
+                <a href="#" id="enableLogging" class="function-link">
+                  pendo.enableLogging()
+                </a>
+              </li>
+              <li onclick=(pendo.validateEnvironment()) class="pendo-functions">
+                <a href="#" id="validateEnvironment" class="function-link">
+                  pendo.validateEnvironment()
+                </a>
+              </li>
+              <li onclick=(console.log(pendo.apiKey)) class="pendo-functions">
+                <a href="#" id="apiKey" class="function-link">
+                  pendo.apiKey
+                </a>
+              </li>
+              <li onclick=(console.log(pendo.getVersion())) class="pendo-functions">
+                <a href="#" id="getVersion" class="function-link">
+                  pendo.getVersion()
+                </a>
+              </li>
+              <li onclick=(console.log(pendo.areGuidesDisabled())) class="pendo-functions">
+                <a href="#" id="areGuidesDisabled" class="function-link">
+                  pendo.areGuidesDisabled()
+                </a>
+              </li>
+              <li onclick="pendo.flushNow(); console.log(`flushNow run`)" class="pendo-functions">
+                <a href="#" id="flushNow" class="function-link">
+                  pendo.flushNow()
+                </a>
+              </li>
+              <li onclick=(console.log(pendo.stopSendingEvents())) class="pendo-functions">
+                <a href="#" id="stopSendingEvents" class="function-link">
+                  pendo.stopSendingEvents()
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="form-wrapper">
+            <!-- Form -->
+            <form id="survey-form">
+              <div class="form-item">
+                <label class="formLabel" id="name-label" for="name">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-info"
+                  placeholder="Enter your Name"
+                  required
+                /><br />
+              </div>
+              <div class="form-item">
+                <label class="formLabel" id="email-label" for="email">Email: </label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-info"
+                  placeholder="Enter your Email"
+                  required
+                /><br />
+              </div>
+              <div class="form-item" for="number">
+                <label class="formLabel" id="number-label">Age: </label>
+                <input
+                  type="number"
+                  id="number"
+                  class="form-info"
+                  placeholder="Enter your age"
+                  min="17"
+                  max="99"
+                />
+                <br />
+              </div>
+              <div class="form-item">
+                <p>What is the Scientific name for Tigers?</p>
+                <select title="scientific-name-heading"
+                  id="dropdown"
+                  class="form-info"
+                  type="select"
+                  name="dropdown"
+                >
+                  <option value="baskin">Panthera Tigris</option>
+                  <option value="exotic">Joe Exotic</option>
+                  <option value="antle">Bhagavan Antle</option>
+                  <option value="lowe">Esperenta Seneca</option>
+                  <option value="tiger">Gustafis Embriolo</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <p>What American Football Team has a Tiger as their Mascot?</p>
+                <label class="formLabel" for="panthers">
+                  <input
+                    id="panthers"
+                    class="list"
+                    type="radio"
+                    name="football"
+                    value="panthers"
+                  />Panthers
+                </label>
+                <label class="formLabel" for="cougars">
+                  <input
+                    id="cougars"
+                    class="list"
+                    type="radio"
+                    name="football"
+                    value="cougars"
+                  />Cougars
+                </label>
+                <label class="formLabel" for="bengals">
+                  <input
+                    id="bengals"
+                    class="list"
+                    type="radio"
+                    name="football"
+                    value="bengals"
+                  />Bengals
+                </label>
+              </div>
+              <div class="form-item">
+                <p>Who are the most famous Disney Tigers?</p>
+                <label class="formLabel" for="shere-khan">
+                  <input
+                    id="shere-khan"
+                    class="list"
+                    type="checkbox"
+                    name="disney-tiger"
+                    value="shere-khan"
+                  />Shere Khan
+                </label>
+                <label class="formLabel" for="tigger">
+                  <input
+                    id="tigger"
+                    class="list"
+                    type="checkbox"
+                    name="disney-tiger"
+                    value="tigger"
+                  />Tigger
+                </label>
+                <label class="formLabel" for="leo">
+                  <input
+                    id="leo"
+                    class="list"
+                    type="checkbox"
+                    name="disney-tiger"
+                    value="leo"
+                  />Leo the Lion
+                </label>
+                <label class="formLabel" for="tigress">
+                  <input
+                    id="tigress"
+                    class="list"
+                    type="checkbox"
+                    name="disney-tiger"
+                    value="tigress"
+                  />Tigress
+                </label>
+                <label class="formLabel" for="hobbes">
+                  <input
+                    id="hobbes"
+                    class="list"
+                    type="checkbox"
+                    name="disney-tiger"
+                    value="hobbes"
+                  />Hobbes
+                </label>
+              </div>
+              <div class="form-item" id="facts">
+                <label class="formLabel" for="tiger-facts"
+                  >Tiger Facts:
+                  </label><textarea
+                    id="tiger-facts"
+                    rows="7"
+                    cols="60"
+                    placeholder="Enter your favorite tiger facts or other comments here."
+                  ></textarea>
+                </label>
+              </div>
+              <div id="mybutton">
+                <button type="submit" onclick="myTrack()" id="submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+            <!-- End Form -->
+            <div id="newTabButton">
+              <a href="https://chariotofflame.github.io" target="_blank" rel="noopener">
+                <button type="button" id="newTab">
+                  Pizza CRM Test Site
+                </button>
+              </a>
+            </div>
+            <div id="iFrameTownButton">
+              <a href="multiFrame/index.html">
+                <button type="button" id="iFrameTown">
+                  <p>
+                    Head to iFrame Town
+                  </p>
+                </button>
+              </a>
+            </div>
+            </span>
+          </div>
+          <div id="pendoStatus">
+            <h1 id="incidents-heading">
+              <a href="https://status.pendo.io/" id="status-link">Current Pendo Status</a></h1>
+          </div>
+        </div>
+      </body>
+    </html>
+  </body>
+</html>

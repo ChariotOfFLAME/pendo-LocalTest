@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iFrame #1</title>
+    <script src="../pendo-snippet.js"></script>
+    <link rel="stylesheet" type="text/css" href="inner1.css" />
+    <script src="inner1.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">Inner iframe</div>
+      <button type="button" onclick="addIframe()" class="add-iframe-btn">
+        Add another iframe in...this iframe
+      </button>
+    </div>
+    <div class="frame-container">
+      <iframe
+        title="iframe-town-inner-2"
+        src="iframe-town-inner-2.html"
+      ></iframe>
+    </div>
+    <select title="dropdown" class="some-dropdown">
+      <option value="" disabled selected>Select your option</option>
+      <option>opt 1</option>
+      <option>opt 2</option>
+      <option>opt 3</option>
+    </select>
+    <button type="button" onclick="toggleHiddenContentVisibility()">
+      A button that doesn't do anything...unless...
+    </button>
+    <div id="hidden-toggle-content">
+      WOAH, IT <strong>DOES</strong> DO SOMETHING
+    </div>
+    <h3>Check out this scroll container tho</h3>
+    <h4>What could be down there?</h4>
+    <div id="scroll-container">
+      <div class="dumb-hidden-text">...oh, just this? laaaaaaaame</div>
+    </div>
+  </body>
+</html>
