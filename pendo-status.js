@@ -5,6 +5,7 @@ sp.summary({
     var ul = document.createElement('ul');
     var arr = data.components;
     var inc = data.incidents;
+    var ul6 = document.createElement('ul');
 
     //create status subtitle
     var h2 = document.createElement('h2');
@@ -13,11 +14,13 @@ sp.summary({
     h2.appendChild(document.createTextNode(data.status.description));
 
     //create incidents section
+    var div2 = document.createElement('div');
     for (var i = 0; i < inc.length; i++) {
       if (inc) {
-        div.appendChild(h2);
-        h2.setAttribute('id', 'incident-summary');
-        h2.appendChild(document.createTextNode('Open Incidents:'));
+        var h2two = document.createElement('h2');
+        div.appendChild(h2two);
+        h2two.setAttribute('id', 'incident-summary');
+        h2two.appendChild(document.createTextNode('Open Incidents:'));
         if (inc[i] instanceof Array) {
           var list = arrToUl(inc[i].name);
         } else {
@@ -38,13 +41,13 @@ sp.summary({
           //dynamically create incident details
           p.appendChild(ul2);
           ul2.appendChild(li2);
-          ul2.appendChild(li3);
           ul2.appendChild(li4);
           ul2.appendChild(li5);
           p.setAttribute('class', 'incident');
           li2.appendChild(document.createTextNode('Status: ' + inc[i].status));
           li2.setAttribute('class', 'incStatus');
           if (inc[i].resolved_at) {
+            ul2.appendChild(li3);
             li3.appendChild(
               document.createTextNode('Resolved At: ' + inc[i].resolved_at)
             );
@@ -56,9 +59,11 @@ sp.summary({
             );
             li4.setAttribute('class', 'incUpdatedAt');
           }
-          li5.appendChild(
-            document.createTextNode('Incident Link: ' + inc[i].shortlink)
-          );
+          li5.appendChild(document.createTextNode('Incident Link:'));
+          var href = document.createElement('a');
+          li5.appendChild(href);
+          href.setAttribute('href', inc[i].shortlink);
+          href.appendChild(document.createTextNode(inc[i].shortlink));
           li5.setAttribute('class', 'incShortlink');
           ul.appendChild(li);
         }
@@ -67,6 +72,10 @@ sp.summary({
     }
 
     //create component status sections
+    var h2three = document.createElement('h2');
+    div2.appendChild(h2three);
+    h2three.setAttribute('id', 'services-summary');
+    h2three.appendChild(document.createTextNode('Services Status:'));
     for (var i = 0; i < arr.length; i++) {
       if (!arr[i].group) {
         if (arr[i] instanceof Array) {
@@ -90,9 +99,10 @@ sp.summary({
             li2.appendChild(document.createTextNode('Degraded'));
             li2.setAttribute('class', 'status degraded');
           }
-          ul.appendChild(li);
+          ul6.appendChild(li);
         }
-        div.appendChild(ul);
+        div.appendChild(div2);
+        div2.appendChild(ul6);
       }
     }
   },
