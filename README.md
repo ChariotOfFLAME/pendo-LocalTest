@@ -7,7 +7,7 @@ Featuring many Pendo testing and debugging methods, as well as other tangential 
 :warning: _WARNING: This repo is designed for use with Pendo Employees and their access levels to the Pendo Application in mind. While many of these functions may work for your customer Subscription, the below instructions are geared towards internal Pendo Employees._ ⚠️
 
 ## Setup
-- Create a new App in your personal Pendo Test Subscription, or add these pages to another App.
+- Create a new App in your personal Pendo Test Subscription, or add these as pages to another App.
 - Download the Repo into a self-contained folder
 - open [pendo-snippet.js](/pendo-snippet.js) in your text editor
 - replace the string on [line 104](/pendo-snippet.js#L104) with the above App's [Pendo API Key](https://support.pendo.io/hc/en-us/articles/9480629519131-Error-No-Matching-API-Key)
